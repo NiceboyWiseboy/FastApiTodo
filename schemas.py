@@ -18,9 +18,20 @@ class CreateUser(BaseModel):
 	fname: str
 	lname: str
 	password: str
+	phone_number: Optional[str]
 
 
 class UserVerification(BaseModel):
 	username: str
 	password: str
 	new_password: str
+
+
+class Address(BaseModel):
+	address1: str
+	address2: str
+	city: str
+	state: str
+	country: str
+	postal_code: str
+	apt_num: Optional[str]
